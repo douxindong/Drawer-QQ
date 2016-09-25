@@ -1,5 +1,6 @@
 # Drawer-QQ
 仿QQ抽屉效果
+![http://ww1.sinaimg.cn/mw690/afa9a093gw1f8652x7jdug208w0gknpd.gif](http://ww1.sinaimg.cn/mw690/afa9a093gw1f8652x7jdug208w0gknpd.gif)
 //  AppDelegate.m
 //  仿QQ抽屉效果
 //
