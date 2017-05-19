@@ -1,38 +1,23 @@
-# Drawer-QQ
-仿QQ抽屉效果
-![http://ww1.sinaimg.cn/mw690/afa9a093gw1f8652x7jdug208w0gknpd.gif](http://ww1.sinaimg.cn/mw690/afa9a093gw1f8652x7jdug208w0gknpd.gif)
-//  AppDelegate.m
-//  仿QQ抽屉效果
-//
-//  Created by 窦心东 on 16/9/25.
-//  Copyright © 2016年 窦心东. All rights reserved.
-//
+>效果演示：
+![效果图](http://upload-images.jianshu.io/upload_images/3729815-99153e9498461b8d.gif?imageMogr2/auto-orient/strip)
+![代码结构](http://upload-images.jianshu.io/upload_images/3729815-2606ba3a0f0cabda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/240)
 
-#import "AppDelegate.h"
-#import "XDDrawerViewController.h"
-#import "XDLeftMenuTableViewController.h"
-@interface AppDelegate ()
-
-@end
-
-@implementation AppDelegate
-
-//当程序启动完毕时调用
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    //创建左边菜单控制器
-    XDLeftMenuTableViewController *leftMenuVC = [XDLeftMenuTableViewController new];
-    //加载storyboard
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    //创建箭头指向的控制器
-    UITabBarController *mainVC = storyboard.instantiateInitialViewController;
-    //设置窗口的根控制器
-    self.window.rootViewController = [XDDrawerViewController drawerVcWithMainVc:mainVC leftMenuVc:leftMenuVC leftWith:300];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
-
+```
+抽屉
+XDDrawerViewController.h
+XDDrawerViewController.m
+```
+```
+左边
+XDLeftMenuTableViewController.h
+XDLeftMenuTableViewController.m
+```
+```
+使用
+ XDmessageViewController.h
+ XDmessageViewController.m
+```
+```
 //
 //  XDDrawerViewController.h
 //  仿QQ抽屉效果
@@ -74,6 +59,8 @@
  */
 - (void)backHomeViewController;
 @end
+```
+```
 //
 //  XDDrawerViewController.m
 //  仿QQ抽屉效果
@@ -307,6 +294,8 @@
 */
 
 @end
+```
+```
 //
 //  XDLeftMenuTableViewController.h
 //  仿QQ抽屉效果
@@ -320,6 +309,9 @@
 @interface XDLeftMenuTableViewController : UITableViewController
 
 @end
+
+```
+```
 //
 //  XDLeftMenuTableViewController.m
 //  仿QQ抽屉效果
@@ -379,6 +371,9 @@
 }
 
 @end
+
+```
+```
 //
 //  XDmessageViewController.h
 //  仿QQ抽屉效果
@@ -392,6 +387,9 @@
 @interface XDmessageViewController : UIViewController
 
 @end
+
+```
+```
 //
 //  XDmessageViewController.m
 //  仿QQ抽屉效果
@@ -427,3 +425,5 @@
 
 @end
 
+```
+项目地址：https://github.com/douxindong/Drawer-QQ.git
